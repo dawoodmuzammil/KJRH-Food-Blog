@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div>
+            <h1 id="jumbo">Welcome to YelpCamp!</h1>
+            <p id="slogan">Mesmiring world, fantastic lives!</p>
+            <p> 
+                <a class="btn btn-primary btn-lg" href="/restaurants/new">Add a new restaurant</a>
+            </p>
+        </div>
+    </header>
+    
+    
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        <!--<div class="col-lg-12">-->
+        <!--    <h3>Our Most Popular Destinations!</h3>-->
+        <!--</div>-->
+            <% restaurants.forEach( function( restaurant) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img id="pix" src="<%= restaurant.image %>">
+                    <div class="caption text-center">
+                        <h4 id="campTitle"><%= restaurant.name %></h4>
+                    </div>
+                    <p style="text-align: center">
+                        <a href="/restaurants/<%= restaurant._id %>" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<p id="copyrights">By Dawood Muzammil. Copyrights reserved</p>    
+<% include ../partials/footer %>

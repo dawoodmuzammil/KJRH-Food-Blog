@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h2 style="text-align: center">Create a new restaurant</h2>
+        <div style="width: 30%; margin: 30px auto; text-align: center">
+            <form action="/restaurants" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Name" name="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Image URL" name="image">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Description" name="description">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Name">
+                </div>
+                
+            </form>
+            <a href="/restaurants">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
